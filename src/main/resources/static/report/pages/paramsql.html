@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--easing-->
+    <link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/colpick.css" type="text/css"/>
+	<link rel="stylesheet" href="../js/hight/lib/codemirror.css">
+	<link rel="stylesheet" href="../js/hight/addon/hint/show-hint.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/plugins/jquery-2.1.4.min.js"></script>
+    <title>sql配置弹出框</title>
+	<style>
+
+		.CodeMirror {
+			border-top: 1px solid black;
+			border-bottom: 1px solid black;
+		}
+	</style>
+
+</head>
+
+<body style='OVERFLOW:SCROLL;OVERFLOW-X:HIDDEN'>
+
+    <!-- 周期弹窗-->
+    <div id='periodWindow' >
+        <div class='container-fluid'>
+            <div class="row form-horizontal">
+                <div class="col-md-10">
+                    <b></b>
+                    <div class="block-title">
+                        <div class="form-group" style="display: none">
+                            <label class="col-sm-2 control-label noPR">id</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-sm" id="id"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label noPR">template</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-sm" id="template"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label noPR">DataName</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-sm" id="taskName"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label noPR">大指标</label>
+                            <div class="col-sm-8">
+                                <select id='bigTask' class="form-control input-sm" style="width: 100%;">
+                                    <option value=1 selected="true">是</option>
+                                    <option value=0>否</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label noPR">截图URL</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-sm" id="screenShot"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label noPR">cell相关</label>
+                            <div class="col-sm-8">
+                                <select id='withCell' class="form-control input-sm" style="width: 100%;">
+                                    <option value=1 selected="true">是</option>
+                                    <option value=0>否</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label noPR">sqlContext</label>
+                            <div class="col-sm-8">
+                                <textarea cols="20" rows="30" id="sqlContext" name="sqlContext" class="form-control input-sm"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label noPR">value</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-sm" id="value"/>
+                            </div>
+                        </div>
+                        <div class="window_footer  text-right">
+                            <a id="saveBtn" class="btn btn-sm btn-primary">
+                                <i class="glyphicon glyphicon-ok-sign"></i> 保存
+                            </a>
+                            <a id="cancelBtn" class="btn btn-sm btn-default">
+                                <i class="glyphicon glyphicon-ban-circle"></i> 取消
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Log弹窗 end-->
+</body>
+<script type="text/javascript" src="../js/hight/lib/codemirror.js"></script>
+<script type="text/javascript" src="../js/hight/mode/sql/sql.js"></script>
+<script type="text/javascript" src="../js/hight/addon/hint/show-hint.js"></script>
+<script type="text/javascript" src="../js/hight/addon/hint/sql-hint.js"></script>
+<script type="text/javascript" src="../js/views/paramsql.js"></script>
+</html>

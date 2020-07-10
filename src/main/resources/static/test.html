@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img/>
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<img src="190.png" id="codeeee">
+<h2 id = "code"></h2>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+    function getBase64Image(img) {
+        var canvas = document.createElement("canvas");
+        canvas.width = img.width;
+        canvas.height = img.height;
+        var ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0, img.width, img.height);
+        var dataURL = canvas.toDataURL("image/png");
+        return dataURL.replace("data:image/png;base64,", "");
+    }
+
+
+    function main() {
+        var img = document.getElementById("codeeee");
+        var data = getBase64Image(img);
+        var code = $("#code");
+        code.html(data);
+        $.ajax('http://localhost:8081/pyjs/code?code='+code,function (data) {
+            console.log(data);
+        });
+
+    }
+    main()
+</script>
+</body>
+</html>

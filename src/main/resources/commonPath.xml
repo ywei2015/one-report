@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Domain ConfigurationVersion="1.0.0.0" Name="filePathConfig">
+	<ExcelPath>C:/document/ExportKML/</ExcelPath>
+	<MIFPath>F:/ExportMIF/</MIFPath>
+	<KMLPath>C:/export/ExportKML/</KMLPath>
+	<geoHost>http://192.168.0.12:8039/</geoHost>
+	<geoAccount>admin</geoAccount>
+	<geoPassword>Fastgis*123</geoPassword>
+	<kmlFileLimit>1000000</kmlFileLimit>
+
+	<!--     一键报告      -->
+	<YQPhantomUrl>http://192.168.0.12:800/FastUI/special/pages/epidemic_shot.html?conf=dt_shotAll_conf</YQPhantomUrl>
+	<databaseType>oracle</databaseType>
+	<phantomjsAutoSwitch>true</phantomjsAutoSwitch>
+	<zipPassword>123456</zipPassword>
+	<ZOOM>12.5</ZOOM>
+</Domain>

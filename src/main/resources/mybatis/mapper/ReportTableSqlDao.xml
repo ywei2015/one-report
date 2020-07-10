@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nokia.report.mapper.ReportTableSqlDao">
+	<resultMap id="BaseResultMap" type="com.nokia.report.pojo.CfgSiteInfoTdlteDO">
+		<result column="SDATE" jdbcType="DATE" property="sdate" />
+		<result column="CITY" jdbcType="VARCHAR" property="city" />
+		<result column="AREA" jdbcType="VARCHAR" property="area" />
+		<result column="REGION1" jdbcType="VARCHAR" property="region1" />
+		<result column="REGION2" jdbcType="VARCHAR" property="region2" />
+		<result column="REGION3" jdbcType="VARCHAR" property="region3" />
+		<result column="REGION4" jdbcType="VARCHAR" property="region4" />
+		<result column="BTSNAME_CN" jdbcType="VARCHAR" property="btsnameCn" />
+		<result column="BTSNAME_EN" jdbcType="VARCHAR" property="btsnameEn" />
+		<result column="CELLNAME_CN" jdbcType="VARCHAR" property="cellnameCn" />
+		<result column="CELLNAME_EN" jdbcType="VARCHAR" property="cellnameEn" />
+		<result column="VENDORID" jdbcType="VARCHAR" property="vendorid" />
+		<result column="VENDORNAME" jdbcType="VARCHAR" property="vendorname" />
+		<result column="SITETYPE" jdbcType="VARCHAR" property="sitetype" />
+		<result column="SCENARIO" jdbcType="VARCHAR" property="scenario" />
+		<result column="LONGITUDE" jdbcType="DECIMAL" property="longitude" />
+		<result column="LATITUDE" jdbcType="DECIMAL" property="latitude" />
+		<result column="HEIGHT" jdbcType="DECIMAL" property="height" />
+		<result column="DOWNTILT" jdbcType="DECIMAL" property="downtilt" />
+		<result column="AZIMUTH" jdbcType="DECIMAL" property="azimuth" />
+		<result column="ENBID" jdbcType="VARCHAR" property="enbid" />
+		<result column="LCRID" jdbcType="VARCHAR" property="lcrid" />
+		<result column="CELLID" jdbcType="VARCHAR" property="cellid" />
+		<result column="ECI" jdbcType="VARCHAR" property="eci" />
+		<result column="TAC" jdbcType="VARCHAR" property="tac" />
+		<result column="PCI" jdbcType="VARCHAR" property="pci" />
+		<result column="BAND" jdbcType="VARCHAR" property="band" />
+		<result column="BAND_ID" jdbcType="VARCHAR" property="bandId" />
+		<result column="EARFCN" jdbcType="VARCHAR" property="earfcn" />
+		<result column="VMAP" jdbcType="VARCHAR" property="vmap" />
+		<result column="CENTERX" jdbcType="VARCHAR" property="centerx" />
+		<result column="CENTERY" jdbcType="VARCHAR" property="centery" />
+		<result column="SPOLYGON" jdbcType="OTHER" property="spolygon" />
+		<result column="SCENCATEGORY" jdbcType="DECIMAL" property="scencategory" />
+		<result column="SPOINT" jdbcType="OTHER" property="spoint" />
+		<result column="SCENE_TYPE" jdbcType="VARCHAR" property="sceneType" />
+		<result column="SCENE_TYPE2" jdbcType="VARCHAR" property="sceneType2" />
+		<result column="SCENE_TYPE_RANK" jdbcType="VARCHAR" property="sceneTypeRank" />
+	</resultMap>
+	<select id="getListBySql" parameterType="String" resultType="java.util.HashMap">
+		${sqlStr}
+	</select>
+
+	<select id="getIntegerBySql" parameterType="String" resultType="java.lang.Integer">
+		${sqlStr}
+	</select>
+    <select id="listCfgSiteinfoTdlteByCityAndSite" resultMap="BaseResultMap">
+		select * from CFG_SITEINFO_TDLTE cft where cft.CITY = #{city} and cft.ENBID = #{site} order by cft.CELLID asc
+	</select>
+</mapper>

@@ -1,0 +1,7 @@
+{
+  "ignoreSslErrors": true,
+  "webSecurityEnabled": false,
+  "maxDiskCacheSize": 40000,
+  "diskCacheEnabled": true
+  ,"offlineStoragePath": "/phantomjs/storage"
+}

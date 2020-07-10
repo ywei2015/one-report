@@ -1,0 +1,22 @@
+[
+  {
+    "sqlName": "zc_epidemic_monitor_export_1",
+    "fileName": "High Risk Infectious Areas"
+  },
+  {
+    "sqlName": "zc_epidemic_monitor_export_2",
+    "fileName": "Location Tracking"
+  },
+  {
+    "sqlName": "zc_epidemic_monitor_export_3",
+    "fileName": "Trajectory"
+  },
+  {
+    "sqlName": "zc_epidemic_monitor_export_4",
+    "fileName": "Dissemination Assessment Analysis"
+  },
+  {
+    "sqlName": "zc_epidemic_monitor_export_5",
+    "fileName": "Spatiotemporal Collision Analysis"
+  }
+]
